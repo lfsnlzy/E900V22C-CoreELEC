@@ -57,7 +57,7 @@ echo "Copying rc_keymap files"
 sudo cp ${common_files}/rc_maps.cfg ${config_path}/rc_maps.cfg
 sudo chown root:root ${config_path}/rc_maps.cfg
 sudo chmod 0664 ${config_path}/rc_maps.cfg
-sudo cp ${common_files}/e900v22c.rc_keymap ${config_path}/rc_keymaps/e900v22c
+sudo cp ${common_files}/e900v22c ${config_path}/rc_keymaps/e900v22c
 sudo chown root:root ${config_path}/rc_keymaps/e900v22c
 sudo chmod 0664 ${config_path}/rc_keymaps/e900v22c
 
