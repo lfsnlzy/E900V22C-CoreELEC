@@ -25,7 +25,7 @@ jobs:
         env:
           VERSION: ${{ github.event.inputs.version }}
         run: |
-          cd /home/runner/work/E900V22C-CoreELEC/E900V22C-CoreELEC
+          cd /home/runner/work/CMCC-CoreELEC/CMCC-CoreELEC
           sh build.sh $VERSION
 
       - name: Export Image
@@ -33,5 +33,5 @@ jobs:
         with:
           name: Image & SHA256
           path: |
-            /home/runner/work/E900V22C-CoreELEC/E900V22C-CoreELEC/*.img.gz
-            /home/runner/work/E900V22C-CoreELEC/E900V22C-CoreELEC/*.img.gz.sha256
+            /home/runner/work/CMCC-CoreELEC/CMCC-CoreELEC/*.img.gz
+            /home/runner/work/CMCC-CoreELEC/CMCC-CoreELEC/*.img.gz.sha256
