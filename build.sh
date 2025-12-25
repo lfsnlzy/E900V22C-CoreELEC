@@ -55,7 +55,6 @@ sudo ln -s ../sprd_sdio-firmware-aml.service ${systemd_path}/multi-user.target.w
 # /storage/.config/system.d
 #chown root:root /storage/.config/system.d/sprd_sdio-firmware-aml.service
 #chmod 0664 /storage/.config/system.d/sprd_sdio-firmware-aml.service
-#ln -s /storage/.config/system.d/sprd_sdio-firmware-aml.service /storage/.config/system.d/multi-user.target.wants/
 #systemctl daemon-reload
 #systemctl enable --now sprd_sdio-firmware-aml.service
 
@@ -68,10 +67,6 @@ echo "Copying remote files"
 sudo cp ${common_files}/remote.conf ${config_path}/remote.conf
 sudo chown root:root ${config_path}/remote.conf
 sudo chmod 0664 ${config_path}/remote.conf
-
-# /storage/.config
-#chown root:root /storage/.config/remote.conf
-#chmod 0664 /storage/.config/remote.conf
 
 echo "Compressing SYSTEM image"
 sudo mksquashfs ${system_root} SYSTEM -comp lzo -Xalgorithm lzo1x_999 -Xcompression-level 9 -b 524288 -no-xattrs
